@@ -1,0 +1,211 @@
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu {
+  width: auto;
+  border-bottom: 3px solid #afc0d7;
+  font-family: Raleway, sans-serif;
+  line-height: 1;
+}
+#cssmenu ul {
+  background: #ffffff;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu.align-right > ul > li > a {
+  margin-right: 0;
+  margin-left: -4px;
+}
+#cssmenu > ul > li > a {
+  z-index: 2;
+  padding: 18px 25px 12px 25px;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #444444;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  margin-right: -4px;
+}
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li > a:hover {
+  color: #ffffff;
+}
+#cssmenu > ul > li > a:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: "";
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: perspective(5px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(5px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(5px) rotateX(2deg);
+  transform-origin: bottom;
+}
+#cssmenu > ul > li.active > a:after,
+#cssmenu > ul > li:hover > a:after,
+#cssmenu > ul > li > a:hover:after {
+  background: #afc0d7;
+}
+
+.imgStyle{
+  width: 100px;
+  height: 100px;
+}
+
+.nav-wrapper{
+  position: relative;
+  color: #fff;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+
+  background: #575c63; /* Old browsers */
+  background: -moz-linear-gradient(top, #575c63 0%, #1f2122 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #575c63 0%,#1f2122 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #575c63 0%,#1f2122 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+
+}
+.brandLogo{
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding-left: 15px;
+  white-space: nowrap;
+}
+
+.titleBar{
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.productImage{
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.productImage:hover{
+  width: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+.productCaption{
+  display: block;
+}
+
+.shoppingCart{
+  width: 100%;
+  height: 100%;
+}
+
+.productImageContainerOverlayText{
+  white-space: nowrap;
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.productImageContainerOverlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #afc0d7;
+  overflow: hidden;
+  width: 150px;
+  height: 0;
+  transition: .5s ease;
+}
+
+.productImageContainer{
+  position: relative;
+  width: 50%;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.productImageContainer:hover .productImageContainerOverlay{
+  height: 25%;
+}
+
+.shoppingCartItem{
+  width:100%;
+  height:55px;
+  padding:1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+}
+
+.shoppingCartItemImage{
+  margin-left:2%;
+  float:left;
+  height:40px;
+  width:40px;
+}
+
+.shoppingCartContainer{
+  min-height: 500px;
+}
+

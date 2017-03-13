@@ -1,0 +1,21 @@
+
+
+<div class="loginContainer">
+
+</div>
+<div class="loginOverlay row col-sm-offset-3 col-sm-9">
+    <h1 class="loginTitle giant col-sm-offset-1">
+        <div class="small" style="color: white">Welcome to</div>
+        IBM Amplify Carts
+    </h1>
+    <div class="row col-sm-offset-1 col-sm-11">
+        <div class="row col-sm-5">
+            <div class="form-group ng-scope"><label for="email" translate="x1Bpx.auth.USERNAME" class="loginLabel">Email</label>
+            <input type="text" id="email" class="form-control ng-valid ng-dirty ng-valid-parse ng-touched" name="email" ng-model="userEmail" autofocus="" tabindex="1"></div>
+            <span class="pull-left" style="color: red;" ng-if="!userAuthkey">Please provide a valid user in the URL. </span>
+            <a ng-href="#shop" ng-click="setUserEmail()"><button class="loginButton pull-right"><span>Register and login </span></button></a>
+        </div>
+    </div>
+
+
+</div>

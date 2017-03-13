@@ -1,0 +1,73 @@
+.loginContainer{
+  overflow: auto;
+  height: 100vh;
+  background: url("/images/paintedladies.jpg") center/cover no-repeat fixed;
+}
+
+.loginOverlay{
+  background-color: rgba(0,63,105,.85);
+  border-left: 3px solid #337cb7;
+  padding: 180px 0 120px;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loginTitle{
+  color: #FFF;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Lublin,Helvetica Light,Helivetica,Arial,sans-serif;
+  font-size: 48px;
+}
+
+.loginLabel{
+  line-height: normal;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #FFF;
+}
+
+
+.loginButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #575c63;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 24px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.loginButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.loginButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.loginButton:hover span {
+  padding-right: 25px;
+}
+
+.loginButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}

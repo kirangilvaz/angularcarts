@@ -1,0 +1,40 @@
+{
+  "name": "ElintOnline",
+  "version": "0.0.0",
+  "description": "ElintOnline",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "bower": "~1.7.9",
+    "event-stream": "~3.1.7",
+    "gulp": "~3.8.8",
+    "gulp-clean": "~0.3.1",
+    "gulp-concat": "~2.4.1",
+    "gulp-connect": "~2.0.6",
+    "gulp-csslint": "~0.1.5",
+    "gulp-if": "~1.2.4",
+    "gulp-jshint": "~1.8.4",
+    "gulp-karma": "0.0.4",
+    "gulp-minify-css": "~0.3.10",
+    "gulp-minify-html": "~0.1.5",
+    "gulp-newer": "~0.3.0",
+    "gulp-ng-html2js": "~0.1.8",
+    "gulp-real-favicon": "^0.2.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "~1.0.1",
+    "karma": "~0.12.23",
+    "run-sequence": "~0.3.7",
+    "eventsource": "^0.2.0"
+  },
+  "scripts": {
+    "postinstall": "bower cache clean && bower update",
+    "build-prod": "gulp clean && gulp build-prod",
+    "gulp" : "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://stash.xtify.com:7990/scm/x1-se/id-event-services-ui.git"
+  },
+  "author": "Kiran Gilvaz",
+  "license": "UNLICENSED"
+}

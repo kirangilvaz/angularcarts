@@ -1,0 +1,97 @@
+<div class="nav-wrapper">
+    <div class="col s12">
+        <a href="#!" class="brandLogo">IBM Amplify Carts</a>
+        <span style="float: right; padding-right: 15px; cursor: pointer; cursor: hand;" ng-click="logout()">
+            Logout
+        </span>
+    </div>
+</div>
+
+
+
+<div class="col-md-8">
+    <div id="cssmenu">
+        <ul>
+            <li ng-class="{active: filterSelection === 1}" ng-click="setFilterSelection(1)"><a href="#">All furniture</a></li>
+            <li ng-class="{active: filterSelection === 2}" ng-click="setFilterSelection(2)"><a href="#">Handbags</a></li>
+            <li ng-class="{active: filterSelection === 3}" ng-click="setFilterSelection(3)"><a href="#">Shoes</a></li>
+            <li ng-class="{active: filterSelection === 4}" ng-click="setFilterSelection(4)"><a href="#">Laptops</a></li>
+        </ul>
+    </div>
+
+<table class="table">
+        <tr ng-repeat="item in items" ng-if="$index%4 === 0">
+            <td ng-if="items[$index].name !== undefined">
+
+                <div class="productImage" ng-click="viewProduct(items[$index])">
+                    <div class="productImageContainer">
+                        <img ng-src="{{items[$index].imgUrl}}" style="width: 150px; height: 130px; display: block;">
+                        <div class="productImageContainerOverlay">
+                            <div class="productImageContainerOverlayText">Quick view</div>
+                        </div>
+                    </div>
+                    <span class="productCaption">{{items[$index].name}}</span>
+                </div>
+
+            </td>
+            <td ng-if="items[$index+1].name !== undefined">
+                <div class="productImage" ng-click="viewProduct(items[$index+1])">
+                    <div class="productImageContainer">
+                        <img ng-src="{{items[$index+1].imgUrl}}" style="width: 150px; height: 130px; display: block;">
+                        <div class="productImageContainerOverlay">
+                            <div class="productImageContainerOverlayText">Quick view</div>
+                        </div>
+                    </div>
+                    <span class="productCaption">{{items[$index+1].name}}</span>
+                </div>
+            </td>
+            <td ng-if="items[$index+2].name !== undefined">
+                <div class="productImage" ng-click="viewProduct(items[$index+2])">
+                    <div class="productImageContainer">
+                        <img ng-src="{{items[$index+2].imgUrl}}" style="width: 150px; height: 130px; display: block;">
+                        <div class="productImageContainerOverlay">
+                            <div class="productImageContainerOverlayText">Quick view</div>
+                        </div>
+                    </div>
+                    <span class="productCaption">{{items[$index+2].name}}</span>
+                </div>
+            </td>
+            <td ng-if="items[$index+3].name !== undefined">
+                <div class="productImage" ng-click="viewProduct(items[$index+3])">
+                    <div class="productImageContainer">
+                        <img ng-src="{{items[$index+3].imgUrl}}" style="width: 150px; height: 130px; display: block;">
+                        <div class="productImageContainerOverlay">
+                            <div class="productImageContainerOverlayText">Quick view</div>
+                        </div>
+                    </div>
+                    <span class="productCaption">{{items[$index+3].name}}</span>
+                </div>
+            </td>
+        </tr>
+</table>
+    </div>
+
+
+<div class="col-md-4">
+    <div id="cssmenu">
+        <ul>
+            <li ng-class="{active: true}"><a href="#">Shopping cart</a></li>
+        </ul>
+    </div>
+    <div class="shoppingCart">
+        <div class="shoppingCartContainer">
+        <div class='shoppingCartItem' ng-repeat="shoppingCartItem in shoppingCartItems">
+            <div>
+                <img ng-src="{{shoppingCartItem.imgUrl}}" class='shoppingCartItemImage'>
+            </div>
+            <div style='margin-left:60px;'>
+                <h4 style="margin:0px;">{{shoppingCartItem.name}}</h4><div style="float:right;font-size:.8em; cursor: pointer; cursor: hand;" ng-click="shoppingCartItems.splice($index,1);">X</div>
+                <div style="font-size:1em;float:left;">Price: ${{shoppingCartItem.price}}</div>
+
+            </div>
+        </div>
+        </div>
+
+        <a ng-href="#shop" ng-click="completeOrder()"><button class="loginButton pull-right"><span>Complete order</span></button></a>
+    </div>
+</div>
